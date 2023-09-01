@@ -20,9 +20,6 @@ dependencies:
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.29)
-  clsx:
-    specifier: ^2.0.0
-    version: 2.0.0
   eslint:
     specifier: 8.48.0
     version: 8.48.0
@@ -34,7 +31,7 @@ dependencies:
     version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
   novel:
     specifier: latest
-    version: 0.1.16(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4)
+    version: 0.1.17(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4)
   openai:
     specifier: ^4.3.1
     version: 4.3.1
@@ -2094,11 +2091,6 @@ packages:
 
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
-    engines: {node: '>=6'}
-    dev: false
-
-  /clsx@2.0.0:
-    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
     dev: false
 
@@ -4333,8 +4325,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /novel@0.1.16(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4):
-    resolution: {integrity: sha512-NOng4Fu/3k10IG1lLxuGBIR/hfUB/bxDv15gRq0bpMRMYL7cqc5eKKdGGZWY8rSN++AjsVG0+pqBVG8bG++pIA==}
+  /novel@0.1.17(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4):
+    resolution: {integrity: sha512-8m3q1hngwzeMG/Fka8juzpjHeOgpxak4gkyF7q32+07cfrdnn+T6E8Cu2P+vH2lOCVjrIGP6SUFLgws0AW4QSQ==}
     peerDependencies:
       react: ^18.2.0
     dependencies:

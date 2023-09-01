@@ -1,7 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { cal, inter } from "@/styles/fonts";
-import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(cal.variable, inter.variable)}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
