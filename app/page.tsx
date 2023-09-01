@@ -1,5 +1,4 @@
 import { Editor } from "novel";
-import "novel/styles.css";
 
 export default function Home() {
   return (

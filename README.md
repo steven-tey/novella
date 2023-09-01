@@ -14,7 +14,6 @@ Then, you can use it in your code like this:
 
 ```
 import { Editor } from "novel";
-import "novel/styles.css";
 
 export default function App() {
   return (
