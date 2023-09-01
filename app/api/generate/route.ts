@@ -1,13 +1,12 @@
-import { Configuration, OpenAIApi } from "openai-edge";
+import OpenAI from "openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
-import { kv } from "@vercel/kv";
-import { Ratelimit } from "@upstash/ratelimit";
 
-const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+// Create an OpenAI API client (that's edge friendly!)
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY || "",
 });
-const openai = new OpenAIApi(config);
 
+// IMPORTANT! Set the runtime to edge: https://vercel.com/docs/functions/edge-functions/edge-runtime
 export const runtime = "edge";
 
 export async function POST(req: Request): Promise<Response> {
@@ -17,39 +16,13 @@ export async function POST(req: Request): Promise<Response> {
       "Missing OPENAI_API_KEY – make sure to add it to your .env file.",
       {
         status: 400,
-      },
+      }
     );
-  }
-  if (
-    process.env.NODE_ENV != "development" &&
-    process.env.KV_REST_API_URL &&
-    process.env.KV_REST_API_TOKEN
-  ) {
-    const ip = req.headers.get("x-forwarded-for");
-    const ratelimit = new Ratelimit({
-      redis: kv,
-      limiter: Ratelimit.slidingWindow(50, "1 d"),
-    });
-
-    const { success, limit, reset, remaining } = await ratelimit.limit(
-      `novel_ratelimit_${ip}`,
-    );
-
-    if (!success) {
-      return new Response("You have reached your request limit for the day.", {
-        status: 429,
-        headers: {
-          "X-RateLimit-Limit": limit.toString(),
-          "X-RateLimit-Remaining": remaining.toString(),
-          "X-RateLimit-Reset": reset.toString(),
-        },
-      });
-    }
   }
 
   let { prompt } = await req.json();
 
-  const response = await openai.createChatCompletion({
+  const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [
       {
@@ -74,12 +47,6 @@ export async function POST(req: Request): Promise<Response> {
     n: 1,
   });
 
-  // If the response is unauthorized, return a 401 error
-  if (response.status === 401) {
-    return new Response("Error: You are unauthorized to perform this action", {
-      status: 401,
-    });
-  }
   // Convert the response into a friendly text-stream
   const stream = OpenAIStream(response);
 
