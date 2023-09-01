@@ -33,8 +33,8 @@ dependencies:
     specifier: 13.4.19
     version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
   novel:
-    specifier: ^0.1.9
-    version: 0.1.9(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4)
+    specifier: latest
+    version: 0.1.16(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4)
   openai:
     specifier: ^4.3.1
     version: 4.3.1
@@ -2493,7 +2493,7 @@ packages:
       eslint: 8.36.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.36.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.36.0)
+      eslint-plugin-import: 2.28.1(eslint@8.48.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.36.0)
       eslint-plugin-react: 7.33.2(eslint@8.36.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.36.0)
@@ -2518,7 +2518,7 @@ packages:
       eslint: 8.48.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.0(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.48.0)
-      eslint-plugin-import: 2.28.1(eslint@8.48.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.48.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.48.0)
       eslint-plugin-react: 7.33.2(eslint@8.48.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.48.0)
@@ -2549,7 +2549,7 @@ packages:
       enhanced-resolve: 5.15.0
       eslint: 8.36.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.36.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.36.0)
+      eslint-plugin-import: 2.28.1(eslint@8.48.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.0
       is-core-module: 2.13.0
@@ -2572,7 +2572,7 @@ packages:
       enhanced-resolve: 5.15.0
       eslint: 8.48.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.48.0)
-      eslint-plugin-import: 2.28.1(eslint@8.48.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.48.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.0
       is-core-module: 2.13.0
@@ -2672,7 +2672,7 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-import@2.28.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.36.0):
+  /eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-typescript@3.6.0)(eslint@8.48.0):
     resolution: {integrity: sha512-9I9hFlITvOV55alzoKBI+K9q74kv0iKMeY6av5+umsNwayt59fz692daGyjR+oStBQgx6nwR9rXldDev3Clw+A==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -2682,16 +2682,16 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.62.0(eslint@8.36.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 6.5.0(eslint@8.48.0)(typescript@5.2.2)
       array-includes: 3.1.6
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
       debug: 3.2.7
       doctrine: 2.1.0
-      eslint: 8.36.0
+      eslint: 8.48.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.36.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.5.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.0)(eslint@8.48.0)
       has: 1.0.3
       is-core-module: 2.13.0
       is-glob: 4.0.3
@@ -4333,8 +4333,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /novel@0.1.9(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4):
-    resolution: {integrity: sha512-AOl6ebBnuQz1+Oe9GlYknUFJO2xuu+riJXZpcHxBotzgPIp9Ps9X2iXZjdJNaO39cYYnLK/0QLxIAW8kvptgkw==}
+  /novel@0.1.16(react@18.2.0)(solid-js@1.7.11)(svelte@4.2.0)(vue@3.3.4):
+    resolution: {integrity: sha512-NOng4Fu/3k10IG1lLxuGBIR/hfUB/bxDv15gRq0bpMRMYL7cqc5eKKdGGZWY8rSN++AjsVG0+pqBVG8bG++pIA==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
